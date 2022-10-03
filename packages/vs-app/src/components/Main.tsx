@@ -47,7 +47,7 @@ export class Main extends Component<Props, State> {
 
     // Forward url params.
     const params = objectFromQuery();
-    params.m = params.m || 'j4RZx7ZGM6T';
+    params.m = params.m || '3PZqUiaQuy4';
     params.play = params.play || '1';
     params.qs = params.qs || '1';
     params.sr = params.sr || '-.15';

@@ -13,7 +13,7 @@ type ConnectOptions = {
 export async function connect(options: ConnectOptions = {}): Promise<any> {
   const urlParams = new URLSearchParams(window.location.search);
   if (!urlParams.has('m')) {
-    urlParams.set('m', 'j4RZx7ZGM6T');
+    urlParams.set('m', '3PZqUiaQuy4');
   }
 
   let applicationKey = sdkKey;
