@@ -47,6 +47,7 @@ module.exports = {
   devServer: {
     host: process.env.HOST || '0.0.0.0',
     port: 80,
+    allowedHosts: ['.ondigitalocean.app', '.g-maps.info', '.vercel.app'],
     devMiddleware: {
       writeToDisk: true
     }
