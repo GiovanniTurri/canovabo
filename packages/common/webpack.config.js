@@ -6,7 +6,7 @@ module.exports = {
     "filename": "[name].js",
     "path": path.resolve(__dirname, 'dist')
   },
-  devtool: 'source-map',
+  devtool: 'hidden-source-map',
   resolve: {
     extensions: ['.ts']
   },

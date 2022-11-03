@@ -13,7 +13,7 @@ module.exports = {
     filename: 'js/[name].bundle.js',
     path: path.resolve(__dirname, "dist")
   },
-  devtool: 'source-map',
+  devtool: 'hidden-source-map',
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.ts', '.tsx']
   },
@@ -23,7 +23,7 @@ module.exports = {
         test: /\.(ts|tsx)$/,
         loader: 'ts-loader'
       },
-      { enforce: "pre", test: /\.js$/, use: ["source-map-loader"] },
+      { enforce: "pre", test: /\.js$/, use: ["hidden-source-map-loader"] },
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
@@ -45,7 +45,8 @@ module.exports = {
     ]}),
   ],
   devServer: {
-    port: 8000,
+    host: process.env.HOST || '0.0.0.0',
+    port: 80,
     devMiddleware: {
       writeToDisk: true
     }
